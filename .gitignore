@@ -1,0 +1,21 @@
+# local analysis inputs and outputs
+extracted/
+tools/
+proj/
+out/
+win7-sp1-x64.iso
+*.iso
+*.wim
+*.dll
+*.exe
+*.csd
+*.tts
+*.wih
+*.idx
+*.lts
+*.udt
+*.unt
+*.crt
+*.apl
+*.zip
+!archive/anna-session.zip

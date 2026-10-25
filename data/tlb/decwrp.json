@@ -1,0 +1,204 @@
+{
+  "path": "out/tlb/decwrp.tlb",
+  "guid": "{EDEBC0B7-FA4D-45FB-B750-16C8D2340AE8}",
+  "version": "1.0",
+  "lcid": 0,
+  "types": [
+    {
+      "index": 0,
+      "name": "DecObj",
+      "guid": "{3F6B5E16-092A-41ED-930B-0B4125D91D4E}",
+      "kind": "TKIND_COCLASS",
+      "doc": "DecObj Class",
+      "functions": [],
+      "fields": [],
+      "impl": [
+        "IDecObj"
+      ]
+    },
+    {
+      "index": 1,
+      "name": "IDecObj",
+      "guid": "{EAAB8DA2-1E94-4037-BB4A-39A8B7B00BC8}",
+      "kind": "TKIND_DISPATCH",
+      "doc": "IDecObj Interface",
+      "functions": [
+        {
+          "name": "QueryInterface",
+          "memid": 1610612736,
+          "vtable_offset": 0,
+          "invkind": 1,
+          "return": "VT_VOID",
+          "params": [
+            {
+              "name": "riid",
+              "type": "GUID *"
+            },
+            {
+              "name": "ppvObj",
+              "type": "VT_VOID * *"
+            }
+          ]
+        },
+        {
+          "name": "AddRef",
+          "memid": 1610612737,
+          "vtable_offset": 8,
+          "invkind": 1,
+          "return": "VT_UI4",
+          "params": []
+        },
+        {
+          "name": "Release",
+          "memid": 1610612738,
+          "vtable_offset": 16,
+          "invkind": 1,
+          "return": "VT_UI4",
+          "params": []
+        },
+        {
+          "name": "GetTypeInfoCount",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_VOID",
+          "params": [
+            {
+              "name": "pctinfo",
+              "type": "VT_UINT *"
+            }
+          ]
+        },
+        {
+          "name": "GetTypeInfo",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_VOID",
+          "params": [
+            {
+              "name": "itinfo",
+              "type": "VT_UINT"
+            },
+            {
+              "name": "lcid",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "pptinfo",
+              "type": "VT_VOID * *"
+            }
+          ]
+        },
+        {
+          "name": "GetIDsOfNames",
+          "memid": 1610678274,
+          "vtable_offset": 40,
+          "invkind": 1,
+          "return": "VT_VOID",
+          "params": [
+            {
+              "name": "riid",
+              "type": "GUID *"
+            },
+            {
+              "name": "rgszNames",
+              "type": "VT_I1 * *"
+            },
+            {
+              "name": "cNames",
+              "type": "VT_UINT"
+            },
+            {
+              "name": "lcid",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "rgdispid",
+              "type": "VT_I4 *"
+            }
+          ]
+        },
+        {
+          "name": "Invoke",
+          "memid": 1610678275,
+          "vtable_offset": 48,
+          "invkind": 1,
+          "return": "VT_VOID",
+          "params": [
+            {
+              "name": "dispidMember",
+              "type": "VT_I4"
+            },
+            {
+              "name": "riid",
+              "type": "GUID *"
+            },
+            {
+              "name": "lcid",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "wFlags",
+              "type": "VT_UI2"
+            },
+            {
+              "name": "pdispparams",
+              "type": "DISPPARAMS *"
+            },
+            {
+              "name": "pvarResult",
+              "type": "VT_VARIANT *"
+            },
+            {
+              "name": "pexcepinfo",
+              "type": "EXCEPINFO *"
+            },
+            {
+              "name": "puArgErr",
+              "type": "VT_UINT *"
+            }
+          ]
+        },
+        {
+          "name": "Initialize",
+          "memid": 1,
+          "vtable_offset": 56,
+          "invkind": 1,
+          "return": "VT_VOID",
+          "params": [
+            {
+              "name": "strFile",
+              "type": "VT_BSTR"
+            },
+            {
+              "name": "pwszWaveInventoryIdxFile",
+              "type": "VT_BSTR"
+            }
+          ]
+        },
+        {
+          "name": "ReadBSTR",
+          "memid": 2,
+          "vtable_offset": 64,
+          "invkind": 1,
+          "return": "VT_VARIANT",
+          "params": [
+            {
+              "name": "nStart",
+              "type": "VT_I4"
+            },
+            {
+              "name": "nLength",
+              "type": "VT_I4"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IDispatch"
+      ]
+    }
+  ]
+}

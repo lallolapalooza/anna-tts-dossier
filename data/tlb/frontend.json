@@ -1,0 +1,1961 @@
+{
+  "path": "out/tlb/frontend.tlb",
+  "guid": "{A7201431-623E-44A7-A85C-D13AFC0F6AA6}",
+  "version": "2.0",
+  "lcid": 0,
+  "types": [
+    {
+      "index": 0,
+      "name": "MSTTSFrontendENU",
+      "guid": "{55DFB4F7-4175-4B3B-B247-D9B399ADB119}",
+      "kind": "TKIND_COCLASS",
+      "doc": "MSTTS Frontend Class (ENU)",
+      "functions": [],
+      "fields": [],
+      "impl": [
+        "ITTSFrontend",
+        "ITTSSupportDebug"
+      ]
+    },
+    {
+      "index": 1,
+      "name": "ITTSFrontend",
+      "guid": "{42352DF2-A8F5-4043-9BEF-B4213D96EB22}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ITTSFrontend Interface",
+      "functions": [
+        {
+          "name": "Initialize",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "cpToken",
+              "type": "ISpObjectToken *"
+            }
+          ]
+        },
+        {
+          "name": "PrepareSpeech",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pTextFragList",
+              "type": "SPVTEXTFRAG *"
+            },
+            {
+              "name": "dwSpeakFlags",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "pOutputSite",
+              "type": "ISpTTSEngineSite *"
+            }
+          ]
+        },
+        {
+          "name": "FinishSpeech",
+          "memid": 1610678274,
+          "vtable_offset": 40,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": []
+        },
+        {
+          "name": "GetNextUnitSpecList",
+          "memid": 1610678275,
+          "vtable_offset": 48,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ppUnitSpecList",
+              "type": "tagUnitSpec * *"
+            },
+            {
+              "name": "pnUnitNum",
+              "type": "VT_I4 *"
+            },
+            {
+              "name": "pSpeechState",
+              "type": "tagSPEECH_STATE *"
+            },
+            {
+              "name": "pSkipCount",
+              "type": "VT_I4 *"
+            }
+          ]
+        },
+        {
+          "name": "Normalize",
+          "memid": 1610678276,
+          "vtable_offset": 56,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszWord",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszLeftContext",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszRightContext",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "LangID",
+              "type": "VT_UI2"
+            },
+            {
+              "name": "pNormalizationList",
+              "type": "SPNORMALIZATIONLIST *"
+            }
+          ]
+        },
+        {
+          "name": "GetPronunciations",
+          "memid": 1610678277,
+          "vtable_offset": 64,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszWord",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszLeftContext",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszRightContext",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "LangID",
+              "type": "VT_UI2"
+            },
+            {
+              "name": "pWordPronunciationList",
+              "type": "SPWORDPRONUNCIATIONLIST *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "ISpObjectToken",
+      "guid": "{14056589-E16C-11D2-BB90-00C04F8EE6C0}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ISpObjectToken Interface",
+      "functions": [
+        {
+          "name": "SetId",
+          "memid": 1610743808,
+          "vtable_offset": 120,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszCategoryId",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszTokenId",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "fCreateIfNotExist",
+              "type": "VT_I4"
+            }
+          ]
+        },
+        {
+          "name": "GetId",
+          "memid": 1610743809,
+          "vtable_offset": 128,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ppszCoMemTokenId",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        },
+        {
+          "name": "GetCategory",
+          "memid": 1610743810,
+          "vtable_offset": 136,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ppTokenCategory",
+              "type": "ISpObjectTokenCategory * *"
+            }
+          ]
+        },
+        {
+          "name": "CreateInstance",
+          "memid": 1610743811,
+          "vtable_offset": 144,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pUnkOuter",
+              "type": "VT_UNKNOWN"
+            },
+            {
+              "name": "dwClsContext",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "riid",
+              "type": "GUID *"
+            },
+            {
+              "name": "ppvObject",
+              "type": "VT_VOID * *"
+            }
+          ]
+        },
+        {
+          "name": "GetStorageFileName",
+          "memid": 1610743812,
+          "vtable_offset": 152,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "clsidCaller",
+              "type": "GUID *"
+            },
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszFileNameSpecifier",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "nFolder",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "ppszFilePath",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        },
+        {
+          "name": "RemoveStorageFileName",
+          "memid": 1610743813,
+          "vtable_offset": 160,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "clsidCaller",
+              "type": "GUID *"
+            },
+            {
+              "name": "pszKeyName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "fDeleteFile",
+              "type": "VT_I4"
+            }
+          ]
+        },
+        {
+          "name": "Remove",
+          "memid": 1610743814,
+          "vtable_offset": 168,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pclsidCaller",
+              "type": "GUID *"
+            }
+          ]
+        },
+        {
+          "name": "IsUISupported",
+          "memid": 1610743815,
+          "vtable_offset": 176,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszTypeOfUI",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pvExtraData",
+              "type": "VT_VOID *"
+            },
+            {
+              "name": "cbExtraData",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "punkObject",
+              "type": "VT_UNKNOWN"
+            },
+            {
+              "name": "pfSupported",
+              "type": "VT_I4 *"
+            }
+          ]
+        },
+        {
+          "name": "DisplayUI",
+          "memid": 1610743816,
+          "vtable_offset": 184,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "hwndParent",
+              "type": "wireHWND"
+            },
+            {
+              "name": "pszTitle",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszTypeOfUI",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pvExtraData",
+              "type": "VT_VOID *"
+            },
+            {
+              "name": "cbExtraData",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "punkObject",
+              "type": "VT_UNKNOWN"
+            }
+          ]
+        },
+        {
+          "name": "MatchesAttributes",
+          "memid": 1610743817,
+          "vtable_offset": 192,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszAttributes",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pfMatches",
+              "type": "VT_I4 *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "ISpDataKey"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "ISpDataKey",
+      "guid": "{14056581-E16C-11D2-BB90-00C04F8EE6C0}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ISpDataKey Interface",
+      "functions": [
+        {
+          "name": "SetData",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "cbData",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "pData",
+              "type": "VT_UI1 *"
+            }
+          ]
+        },
+        {
+          "name": "GetData",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pcbData",
+              "type": "VT_UI4 *"
+            },
+            {
+              "name": "pData",
+              "type": "VT_UI1 *"
+            }
+          ]
+        },
+        {
+          "name": "SetStringValue",
+          "memid": 1610678274,
+          "vtable_offset": 40,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszValue",
+              "type": "VT_LPWSTR"
+            }
+          ]
+        },
+        {
+          "name": "GetStringValue",
+          "memid": 1610678275,
+          "vtable_offset": 48,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "ppszValue",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        },
+        {
+          "name": "SetDWORD",
+          "memid": 1610678276,
+          "vtable_offset": 56,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "dwValue",
+              "type": "VT_UI4"
+            }
+          ]
+        },
+        {
+          "name": "GetDWORD",
+          "memid": 1610678277,
+          "vtable_offset": 64,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pdwValue",
+              "type": "VT_UI4 *"
+            }
+          ]
+        },
+        {
+          "name": "OpenKey",
+          "memid": 1610678278,
+          "vtable_offset": 72,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszSubKeyName",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "ppSubKey",
+              "type": "ISpDataKey * *"
+            }
+          ]
+        },
+        {
+          "name": "CreateKey",
+          "memid": 1610678279,
+          "vtable_offset": 80,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszSubKey",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "ppSubKey",
+              "type": "ISpDataKey * *"
+            }
+          ]
+        },
+        {
+          "name": "DeleteKey",
+          "memid": 1610678280,
+          "vtable_offset": 88,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszSubKey",
+              "type": "VT_LPWSTR"
+            }
+          ]
+        },
+        {
+          "name": "DeleteValue",
+          "memid": 1610678281,
+          "vtable_offset": 96,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszValueName",
+              "type": "VT_LPWSTR"
+            }
+          ]
+        },
+        {
+          "name": "EnumKeys",
+          "memid": 1610678282,
+          "vtable_offset": 104,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "Index",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "ppszSubKeyName",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        },
+        {
+          "name": "EnumValues",
+          "memid": 1610678283,
+          "vtable_offset": 112,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "Index",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "ppszValueName",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "ISpObjectTokenCategory",
+      "guid": "{2D3D3845-39AF-4850-BBF9-40B49780011D}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ISpObjectTokenCategory",
+      "functions": [
+        {
+          "name": "SetId",
+          "memid": 1610743808,
+          "vtable_offset": 120,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszCategoryId",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "fCreateIfNotExist",
+              "type": "VT_I4"
+            }
+          ]
+        },
+        {
+          "name": "GetId",
+          "memid": 1610743809,
+          "vtable_offset": 128,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ppszCoMemCategoryId",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        },
+        {
+          "name": "GetDataKey",
+          "memid": 1610743810,
+          "vtable_offset": 136,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "spdkl",
+              "type": "SPDATAKEYLOCATION"
+            },
+            {
+              "name": "ppDataKey",
+              "type": "ISpDataKey * *"
+            }
+          ]
+        },
+        {
+          "name": "EnumTokens",
+          "memid": 1610743811,
+          "vtable_offset": 144,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pzsReqAttribs",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "pszOptAttribs",
+              "type": "VT_LPWSTR"
+            },
+            {
+              "name": "ppEnum",
+              "type": "IEnumSpObjectTokens * *"
+            }
+          ]
+        },
+        {
+          "name": "SetDefaultTokenId",
+          "memid": 1610743812,
+          "vtable_offset": 152,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pszTokenId",
+              "type": "VT_LPWSTR"
+            }
+          ]
+        },
+        {
+          "name": "GetDefaultTokenId",
+          "memid": 1610743813,
+          "vtable_offset": 160,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ppszCoMemTokenId",
+              "type": "VT_LPWSTR *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "ISpDataKey"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "SPDATAKEYLOCATION",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "SPDKL_DefaultLocation",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPDKL_CurrentUser",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPDKL_LocalMachine",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPDKL_CurrentConfig",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 6,
+      "name": "IEnumSpObjectTokens",
+      "guid": "{06B64F9E-7FDA-11D2-B4F2-00C04F797396}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "IEnumSpObjectTokens Interface",
+      "functions": [
+        {
+          "name": "Next",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "celt",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "pelt",
+              "type": "ISpObjectToken * *"
+            },
+            {
+              "name": "pceltFetched",
+              "type": "VT_UI4 *"
+            }
+          ]
+        },
+        {
+          "name": "Skip",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "celt",
+              "type": "VT_UI4"
+            }
+          ]
+        },
+        {
+          "name": "Reset",
+          "memid": 1610678274,
+          "vtable_offset": 40,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": []
+        },
+        {
+          "name": "Clone",
+          "memid": 1610678275,
+          "vtable_offset": 48,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ppEnum",
+              "type": "IEnumSpObjectTokens * *"
+            }
+          ]
+        },
+        {
+          "name": "Item",
+          "memid": 1610678276,
+          "vtable_offset": 56,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "Index",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "ppToken",
+              "type": "ISpObjectToken * *"
+            }
+          ]
+        },
+        {
+          "name": "GetCount",
+          "memid": 1610678277,
+          "vtable_offset": 64,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pCount",
+              "type": "VT_UI4 *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "wireHWND",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ALIAS",
+      "doc": null,
+      "functions": [],
+      "fields": [],
+      "impl": []
+    },
+    {
+      "index": 8,
+      "name": "_RemotableHandle",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "fContext",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "u",
+          "type": "__MIDL_IWinTypes_0009",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 9,
+      "name": "__MIDL_IWinTypes_0009",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_UNION",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "hInproc",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "hRemote",
+          "type": "VT_I4",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 10,
+      "name": "SPVTEXTFRAG",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "pNext",
+          "type": "SPVTEXTFRAG *",
+          "varkind": 0
+        },
+        {
+          "name": "State",
+          "type": "SPVSTATE",
+          "varkind": 0
+        },
+        {
+          "name": "pTextStart",
+          "type": "VT_LPWSTR",
+          "varkind": 0
+        },
+        {
+          "name": "ulTextLen",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "ulTextSrcOffset",
+          "type": "VT_UI4",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 11,
+      "name": "SPVSTATE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "eAction",
+          "type": "SPVACTIONS",
+          "varkind": 0
+        },
+        {
+          "name": "LangID",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "wReserved",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "EmphAdj",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "RateAdj",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "Volume",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "PitchAdj",
+          "type": "SPVPITCH",
+          "varkind": 0
+        },
+        {
+          "name": "SilenceMSecs",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "pPhoneIds",
+          "type": "VT_UI2 *",
+          "varkind": 0
+        },
+        {
+          "name": "ePartOfSpeech",
+          "type": "SPPARTOFSPEECH",
+          "varkind": 0
+        },
+        {
+          "name": "Context",
+          "type": "SPVCONTEXT",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 12,
+      "name": "SPVACTIONS",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "SPVA_Speak",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPVA_Silence",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPVA_Pronounce",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPVA_Bookmark",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPVA_SpellOut",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPVA_Section",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPVA_ParseUnknownTag",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 13,
+      "name": "SPVPITCH",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "MiddleAdj",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "RangeAdj",
+          "type": "VT_I4",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 14,
+      "name": "SPPARTOFSPEECH",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "SPPS_NotOverriden",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Unknown",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Noun",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Verb",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Modifier",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Function",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Interjection",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_Noncontent",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_LMA",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPPS_SuppressWord",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 15,
+      "name": "SPVCONTEXT",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "pCategory",
+          "type": "VT_LPWSTR",
+          "varkind": 0
+        },
+        {
+          "name": "pBefore",
+          "type": "VT_LPWSTR",
+          "varkind": 0
+        },
+        {
+          "name": "pAfter",
+          "type": "VT_LPWSTR",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 16,
+      "name": "ISpTTSEngineSite",
+      "guid": "{9880499B-CCE9-11D2-B503-00C04F797396}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ISpTTSEngineSite Interface",
+      "functions": [
+        {
+          "name": "GetActions",
+          "memid": 1610743808,
+          "vtable_offset": 40,
+          "invkind": 1,
+          "return": "VT_UI4",
+          "params": []
+        },
+        {
+          "name": "Write",
+          "memid": 1610743809,
+          "vtable_offset": 48,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pBuff",
+              "type": "VT_VOID *"
+            },
+            {
+              "name": "cb",
+              "type": "VT_UI4"
+            },
+            {
+              "name": "pcbWritten",
+              "type": "VT_UI4 *"
+            }
+          ]
+        },
+        {
+          "name": "GetRate",
+          "memid": 1610743810,
+          "vtable_offset": 56,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pRateAdjust",
+              "type": "VT_I4 *"
+            }
+          ]
+        },
+        {
+          "name": "GetVolume",
+          "memid": 1610743811,
+          "vtable_offset": 64,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pusVolume",
+              "type": "VT_UI2 *"
+            }
+          ]
+        },
+        {
+          "name": "GetSkipInfo",
+          "memid": 1610743812,
+          "vtable_offset": 72,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "peType",
+              "type": "SPVSKIPTYPE *"
+            },
+            {
+              "name": "plNumItems",
+              "type": "VT_I4 *"
+            }
+          ]
+        },
+        {
+          "name": "CompleteSkip",
+          "memid": 1610743813,
+          "vtable_offset": 80,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "ulNumSkipped",
+              "type": "VT_I4"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "ISpEventSink"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "ISpEventSink",
+      "guid": "{BE7A9CC9-5F9E-11D2-960F-00C04F8EE628}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ISpEventSink Interface",
+      "functions": [
+        {
+          "name": "AddEvents",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pEventArray",
+              "type": "SPEVENT *"
+            },
+            {
+              "name": "ulCount",
+              "type": "VT_UI4"
+            }
+          ]
+        },
+        {
+          "name": "GetEventInterest",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pullEventInterest",
+              "type": "VT_UI8 *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "SPEVENT",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "eEventId",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "elParamType",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "ulStreamNum",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "ullAudioStreamOffset",
+          "type": "VT_UI8",
+          "varkind": 0
+        },
+        {
+          "name": "wParam",
+          "type": "UINT_PTR",
+          "varkind": 0
+        },
+        {
+          "name": "lParam",
+          "type": "LONG_PTR",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 19,
+      "name": "UINT_PTR",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ALIAS",
+      "doc": null,
+      "functions": [],
+      "fields": [],
+      "impl": []
+    },
+    {
+      "index": 20,
+      "name": "LONG_PTR",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ALIAS",
+      "doc": null,
+      "functions": [],
+      "fields": [],
+      "impl": []
+    },
+    {
+      "index": 21,
+      "name": "SPVSKIPTYPE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "SPVST_SENTENCE",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 22,
+      "name": "tagUnitSpec",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "wLangID",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "sUnitIndex",
+          "type": "VT_I2",
+          "varkind": 0
+        },
+        {
+          "name": "bUnitFeatureVector",
+          "type": "CArray",
+          "varkind": 0
+        },
+        {
+          "name": "ePuncType",
+          "type": "tagSENT_PUNCTUATION_TYPE",
+          "varkind": 0
+        },
+        {
+          "name": "lFrontPhoneFlags",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "lBackPhoneFlags",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "eBreakLevel",
+          "type": "tagBREAK_LEVEL_TYPE",
+          "varkind": 0
+        },
+        {
+          "name": "lVolume",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "lRate",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "lPitch",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "lVoice",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "m_CtrlFlags",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "m_SrcPosition",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "m_SrcLen",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "m_SentencePosition",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "m_SentenceLen",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "lUserBreak",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "m_nNumOfEvents",
+          "type": "VT_I4",
+          "varkind": 0
+        },
+        {
+          "name": "m_pEventArray",
+          "type": "SPEVENT *",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 23,
+      "name": "tagSENT_PUNCTUATION_TYPE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "SENT_PUNCTUATION_TYPE_NULL",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SENT_PUNCTUATION_TYPE_PERIOD",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SENT_PUNCTUATION_TYPE_EXCLAMATION",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SENT_PUNCTUATION_TYPE_QUESTION",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 24,
+      "name": "tagBREAK_LEVEL_TYPE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "BK_IDX_PHONE",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "BK_IDX_SYLLABLE",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "BK_IDX_WORD",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "BK_IDX_INTERM_PHRASE",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "BK_IDX_INTONA_PHRASE",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "BK_IDX_SENTENCE",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 25,
+      "name": "tagSPEECH_STATE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "SPEECH_CONTINUE",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "SPEECH_DONE",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 26,
+      "name": "SPNORMALIZATIONLIST",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "ulSize",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "ppszzNormalizedList",
+          "type": "VT_UI2 * *",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 27,
+      "name": "SPWORDPRONUNCIATIONLIST",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "ulSize",
+          "type": "VT_UI4",
+          "varkind": 0
+        },
+        {
+          "name": "pvBuffer",
+          "type": "VT_UI1 *",
+          "varkind": 0
+        },
+        {
+          "name": "pFirstWordPronunciation",
+          "type": "SPWORDPRONUNCIATION *",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 28,
+      "name": "SPWORDPRONUNCIATION",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_RECORD",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "pNextWordPronunciation",
+          "type": "SPWORDPRONUNCIATION *",
+          "varkind": 0
+        },
+        {
+          "name": "eLexiconType",
+          "type": "SPLEXICONTYPE",
+          "varkind": 0
+        },
+        {
+          "name": "LangID",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "wPronunciationFlags",
+          "type": "VT_UI2",
+          "varkind": 0
+        },
+        {
+          "name": "ePartOfSpeech",
+          "type": "SPPARTOFSPEECH",
+          "varkind": 0
+        },
+        {
+          "name": "szPronunciation",
+          "type": "CArray",
+          "varkind": 0
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 29,
+      "name": "SPLEXICONTYPE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "eLEXTYPE_USER",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_APP",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_VENDORLEXICON",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_LETTERTOSOUND",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_MORPHOLOGY",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_RESERVED4",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_USER_SHORTCUT",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_RESERVED6",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_RESERVED7",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_RESERVED8",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_RESERVED9",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_RESERVED10",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE1",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE2",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE3",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE4",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE5",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE6",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE7",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE8",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE9",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE10",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE11",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE12",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE13",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE14",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE15",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE16",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE17",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE18",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE19",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "eLEXTYPE_PRIVATE20",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    },
+    {
+      "index": 30,
+      "name": "ITTSSupportDebug",
+      "guid": "{AEF2D020-8C7E-499E-8CC6-3FDAF55431B2}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ITTSSupportDebug Interface",
+      "functions": [
+        {
+          "name": "GetSupportedTypes",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pdwTypes",
+              "type": "VT_UI4 *"
+            }
+          ]
+        },
+        {
+          "name": "SetDebugger",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pTTSDebug",
+              "type": "ITTSDebug *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    },
+    {
+      "index": 31,
+      "name": "ITTSDebug",
+      "guid": "{4559C3AB-17BF-49DF-81D4-334D7921E1FC}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "ITTSDebug Interface",
+      "functions": [
+        {
+          "name": "GetInterestedTypes",
+          "memid": 1610678272,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "pdwTypes",
+              "type": "VT_UI4 *"
+            }
+          ]
+        },
+        {
+          "name": "Invoke",
+          "memid": 1610678273,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "mdType",
+              "type": "tagMSTTS_DEBUG_TYPE"
+            },
+            {
+              "name": "bstrData",
+              "type": "VT_BSTR *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    },
+    {
+      "index": 32,
+      "name": "tagMSTTS_DEBUG_TYPE",
+      "guid": "{00000000-0000-0000-0000-000000000000}",
+      "kind": "TKIND_ENUM",
+      "doc": null,
+      "functions": [],
+      "fields": [
+        {
+          "name": "MD_LOGGING",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_DUMPNORM",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_DUMPPOS",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_DUMPFEATURE",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_SKIPBACKEND",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_GETLABLEDSCRIPTS",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_DUMPUNITINFO",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_DUMPWAVEUNITPATH",
+          "type": "VT_INT",
+          "varkind": 2
+        },
+        {
+          "name": "MD_DUMPPATHCOST",
+          "type": "VT_INT",
+          "varkind": 2
+        }
+      ],
+      "impl": []
+    }
+  ]
+}

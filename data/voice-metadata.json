@@ -1,0 +1,84 @@
+{
+  "dir": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk",
+  "files": {
+    "M1033DSK.APL": {
+      "size": 16066
+    },
+    "M1033DSK.CRT": {
+      "size": 484600
+    },
+    "M1033DSK.CSD": {
+      "size": 29798100
+    },
+    "M1033DSK.IDX": {
+      "size": 132508,
+      "header_size": 72,
+      "block_size": 450,
+      "format_size": 64,
+      "wave_format": {
+        "format_tag": 10,
+        "channels": 1,
+        "samples_per_sec": 16000,
+        "avg_bytes_per_sec": 1500,
+        "block_align": 450,
+        "bits_per_sample": 16,
+        "cb_size": 46,
+        "extra": "100004000000000000000000000010000000a7991a0005c92d40145a600000000000000000000000000000000000"
+      },
+      "block_count": 66218,
+      "decoded_samples": 635637906,
+      "decoded_seconds": 39727.369125,
+      "length_min": 4800,
+      "length_max": 18240,
+      "first_lengths": [
+        4800,
+        4800,
+        5760,
+        4800,
+        8640,
+        5760,
+        4800,
+        5760,
+        9600,
+        5760,
+        5760,
+        8640,
+        9600,
+        6720,
+        7680,
+        7680
+      ]
+    },
+    "M1033DSK.LTS": {
+      "size": 931696
+    },
+    "M1033DSK.TTS": {
+      "size": 2430393
+    },
+    "M1033DSK.UDT": {
+      "size": 11166,
+      "magic": "55445400",
+      "version": 1,
+      "entry_count": 260,
+      "lcid": "0x409",
+      "header_hex": "55445400010000000401000009041c0000000000111100000000000008000000"
+    },
+    "M1033DSK.UNT": {
+      "size": 3182160
+    },
+    "M1033DSK.WIH": {
+      "size": 3597414,
+      "version": 0,
+      "format": 3,
+      "sample_rate": 16000,
+      "bytes_per_sample": 2,
+      "channels": 1,
+      "header_hex": "0000000003000000803e000002000100"
+    }
+  },
+  "validation": {
+    "csd_size": 29798100,
+    "expected_csd_size": 29798100,
+    "size_matches": true
+  }
+}

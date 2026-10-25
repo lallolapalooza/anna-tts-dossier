@@ -1,0 +1,122 @@
+[
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSCommon.dll",
+    "size": 35328,
+    "sha256": "91eb82539eb153e40d4e33fae3ca6bee3caa4fa112c29d134fb5f122f490bc14"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSDecWrp.dll",
+    "size": 47616,
+    "sha256": "0c316510a86f2988f624093f6223e1ea7981cb9a549695fcff2bdd6c2ebaf489"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSEngine.dll",
+    "size": 150528,
+    "sha256": "12641a4a285fb99f6a0165063581459c55badc26234bb83de440146b81fbf977"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSLoc.dll",
+    "size": 8704,
+    "sha256": "825c4cf167308f691d29375fe6a09dc2500e307021b103a1c6fe8410e0dc461b"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/MSTTSFrontendENU.dll",
+    "size": 274944,
+    "sha256": "4dc0c318603eddd69afac477b189ce51be8be7a767dd34cf70a29cb5f9a8891b"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/MSTTSLoc.dll.mui",
+    "size": 2560,
+    "sha256": "4382ed166a4d4b7d8bdbb6d363d46b16af87cdcb81d32f00ed0524638118d948"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.APL",
+    "size": 16066,
+    "sha256": "ca539393e83f9f437ff032de8ff0226f8ad63152d213255a38297d334fbca186"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.CRT",
+    "size": 484600,
+    "sha256": "02fc27af09e0d468c92310ade9c5a63321e55cf8d8113516c72128082d96068d"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.CSD",
+    "size": 29798100,
+    "sha256": "5c087dd0761a5e7cb73b363e5953495a69abf87b2fe97d55edc8b1f4b1ad142e"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.IDX",
+    "size": 132508,
+    "sha256": "ba40b25afe64e9c9e2e75c59dc982bf54a20a2695cf2280db94500776b761102"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.LTS",
+    "size": 931696,
+    "sha256": "9e8da98bd74242298e89e6dfecaafc3676f15b98d962b33961f57d96971cbff8"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.TTS",
+    "size": 2430393,
+    "sha256": "966315647eb946e2d96033bfd21c1fce2ba5ed5ac8796ee8d20537c257926817"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.UDT",
+    "size": 11166,
+    "sha256": "930dc54f61f42fa2bc1ed9a82d47ad00fee1bca14550d6f144d0f5f5a00d2429"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.UNT",
+    "size": 3182160,
+    "sha256": "b6849d732ca36cc8002de232592281033bb673c6024945cedfac6731d333428c"
+  },
+  {
+    "path": "extracted/win7/Program Files (x86)/Common Files/SpeechEngines/Microsoft/TTS20/en-US/enu-dsk/M1033DSK.WIH",
+    "size": 3597414,
+    "sha256": "6bd0ac584ff4cb72a9d769c3bf069e3bbd778ce384e3bf83179ddde72c50442d"
+  },
+  {
+    "path": "extracted/win7/Program Files/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSCommon.dll",
+    "size": 41472,
+    "sha256": "c8103a800569db0e900fc91120aa63a1e04a94646bf7efbcfc1a61d8d85f48dc"
+  },
+  {
+    "path": "extracted/win7/Program Files/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSEngine.dll",
+    "size": 181248,
+    "sha256": "36b15355ecfb20bf2fbad54ef476db9a1031059f85dbd60dbd1c00c4f8fe4ca1"
+  },
+  {
+    "path": "extracted/win7/Program Files/Common Files/SpeechEngines/Microsoft/TTS20/MSTTSLoc.dll",
+    "size": 9728,
+    "sha256": "738cde0c163a29393d66526799244ea47a70c4f86539341cf602912164a586c1"
+  },
+  {
+    "path": "extracted/win7/Program Files/Common Files/SpeechEngines/Microsoft/TTS20/en-US/MSTTSFrontendENU.dll",
+    "size": 373760,
+    "sha256": "355481797be01c22764074ae4066d079d5d504611bffdc865fc9a2515c86e9e0"
+  },
+  {
+    "path": "extracted/win7/Program Files/Common Files/SpeechEngines/Microsoft/TTS20/en-US/MSTTSLoc.dll.mui",
+    "size": 2560,
+    "sha256": "c12e0864883aea047955b090bfaee578a94b6c6ed5c64ffcd71945ef1a7ba1d4"
+  },
+  {
+    "path": "extracted/win7/Windows/Speech/Common/sapisvr.exe",
+    "size": 44544,
+    "sha256": "938c02c2c682b542788f0d94abab2fa7d80d00e1b8a55e19bee49af31ab10d9f"
+  },
+  {
+    "path": "extracted/win7/Windows/SysWOW64/Speech/Common/sapi.dll",
+    "size": 1202176,
+    "sha256": "8ba490c65cb6978b4aaa8565a6e1f5277d90ecd3f08669712a26a3edda668e3d"
+  },
+  {
+    "path": "extracted/win7/Windows/System32/Speech/Common/sapi.dll",
+    "size": 1435648,
+    "sha256": "e7c5f172bc194548bdb09cb6ba9d570cda559adf9cb634fdc2086884a26ea290"
+  },
+  {
+    "path": "extracted/win7/Windows/System32/config/SOFTWARE",
+    "size": 38010880,
+    "sha256": "31a8ed9236087e0a5a14911d6e9bc70e16822370ff1a48219053bdfffaa01dfe"
+  }
+]

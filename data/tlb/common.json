@@ -1,0 +1,75 @@
+{
+  "path": "out/tlb/common.tlb",
+  "guid": "{613808A3-159B-4D91-B4F0-A22AEE2D1AAC}",
+  "version": "2.0",
+  "lcid": 0,
+  "types": [
+    {
+      "index": 0,
+      "name": "LTS",
+      "guid": "{F66A6818-F490-431B-8CA4-4CFDA287327B}",
+      "kind": "TKIND_COCLASS",
+      "doc": "MSTTS LTS Class",
+      "functions": [],
+      "fields": [],
+      "impl": [
+        "ILTS"
+      ]
+    },
+    {
+      "index": 1,
+      "name": "ILTS",
+      "guid": "{A0278C53-9ABF-4C9E-8903-2E86BC989B62}",
+      "kind": "TKIND_INTERFACE",
+      "doc": "MSTTS ILTS Interface",
+      "functions": [
+        {
+          "name": "Initialize",
+          "memid": 1,
+          "vtable_offset": 24,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "bstrFilename",
+              "type": "VT_BSTR"
+            },
+            {
+              "name": "bUseShallow",
+              "type": "VT_I1"
+            }
+          ]
+        },
+        {
+          "name": "Free",
+          "memid": 2,
+          "vtable_offset": 32,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": []
+        },
+        {
+          "name": "GetPronunciation",
+          "memid": 3,
+          "vtable_offset": 40,
+          "invkind": 1,
+          "return": "VT_HRESULT",
+          "params": [
+            {
+              "name": "bstrSym",
+              "type": "VT_BSTR"
+            },
+            {
+              "name": "pbstrPron",
+              "type": "VT_BSTR *"
+            }
+          ]
+        }
+      ],
+      "fields": [],
+      "impl": [
+        "IUnknown"
+      ]
+    }
+  ]
+}
